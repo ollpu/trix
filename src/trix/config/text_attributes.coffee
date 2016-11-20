@@ -24,7 +24,8 @@ Trix.config.textAttributes =
   underline:
     tagName: "u"
     inheritable: true
-    style = window.getComputedStyle(element)
-    style["text-decoration"] is "underline"
+    parser: (element) ->
+      style = window.getComputedStyle(element)
+      style["text-decoration"] is "underline"
   frozen:
     style: { "backgroundColor": "highlight" }
